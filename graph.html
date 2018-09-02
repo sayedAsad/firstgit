@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="boot/css/bootstrap.min.css" >
+	<script src="boot/js/bootstrap.min.js"></script>	
+	<script src="jquery-3.3.1.min.js"></script>	
+	<link rel='stylesheet' href='style.css'>
+
+<script src='Chart.js'></script>	
+<script src='pie.js'></script>	
+<script src='progress.js'></script>
+<script src='bar.js'></script>
+<style>
+#myProgress,#myProg{
+
+width:100%;
+background-color:#ddd;
+}
+
+#myBar,#myB{
+
+width:0%;
+height:30px;
+background-color: #4CAF50;
+text-align:center;
+line-height:30px;
+color:black;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class='container-fluid' >
+
+<div class='col-sm-12 head' style="background-color:black"></div>
+
+<div class='col-sm-12 bar1' style='background-color:#d1d2bf'>
+<br/>
+<h3 style='text-align:center'>User independent progress bar</h3>
+
+<div id='myProgress'>
+	<div id='myBar' style='border-radius:20px;'></div>
+</div>
+
+<center><button onclick='move()' class='btn btn-default btn1'>Run</button></center>
+
+</div>
+
+<div class='col-sm-12 bar2' style='background-color:#d1d2bf'>
+<br/>
+<h3 style='text-align:center'>User input progress bar</h3>
+
+<div id='myProg'>
+	<div id='myB' style='border-radius:20px'></div>
+</div>
+
+<center>
+<div class='col-sm-5'>
+	<input type='text' id='choose' class='form-control' placeholder='Enter a number'/>	
+<br>
+	<button onclick='specificMove()' class='btn btn-default'>Run</button>
+</div>
+</center>
+</div>
+
+<div class='col-sm-12 pie1' style='background-color:#d1d2bf'>
+<br/>
+<h3 style='text-align:center'>Pie chart</h3>
+
+<center>
+<canvas id='mycanvas1' width='250%' height='250%' style='margin-top:5%'></canvas>
+<button onclick='draw1()' class='btn btn-default' style='margin-top:5%'>Run</button>
+</center>
+
+
+</div>
+
+<div class='col-sm-12 pie2' style='background-color:#d1d2bf'>
+<br/>
+<h3 style='text-align:center'>User input pie chart</h3>
+
+<center>
+<canvas id='mycanvas2' width='250' height='250' style='margin-top:5%'></canvas><br/>
+
+<br/>
+<div class='col-sm-9'>
+<input type='text' size='15%' placeholder='Blue' id='blue'/>
+<input type='text' size='15%' placeholder='Green' id='green'/>
+<input type='text' size='15%'placeholder='orange' id='orange'/>	&nbsp;&nbsp;&nbsp;
+<button onclick='draw2()' class='btn btn-default'>Analyze</button>
+</div>
+
+<br/><br/><br/>
+<h3 style='text-align:center'>Random Bar display</h3>
+<br/>
+
+<div class='col-sm-6 bar'>
+	
+	<canvas id="barcanvas"></canvas>
+
+</div>
+</center>
+</div>
+
+
+
+
+
+
+
+</div>
+<div class='footer'></div>
+</body>
+</html>
